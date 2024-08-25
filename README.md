@@ -6,7 +6,6 @@
 
 </div>
 
-
 <p align="center">
     <img src="https://raw.githubusercontent.com/stylescape/brand/master/src/logo/logo-transparant.png" width="20%" height="20%" alt="Stylescape Logo">
 </p>
