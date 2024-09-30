@@ -17,7 +17,7 @@
         "stylescape": "^0.0.31"
     },
     "devDependencies": {
-        "sass": "^1.79.3",
+        "sass": "^1.79.4",
         "vite": "^5.4.8"
     }
 }
