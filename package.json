@@ -14,7 +14,7 @@
         "test": "npm run build"
     },
     "dependencies": {
-        "stylescape": "^0.1.5"
+        "stylescape": "^0.1.13"
     },
     "devDependencies": {
         "sass": "^1.89.0",
