@@ -14,10 +14,10 @@
         "test": "npm run build"
     },
     "dependencies": {
-        "stylescape": "^0.1.41"
+        "stylescape": "^0.1.51"
     },
     "devDependencies": {
-        "sass": "^1.90.0",
+        "sass": "^1.92.1",
         "vite": "^6.3.5"
     }
 }
