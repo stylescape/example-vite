@@ -1,7 +1,5 @@
-// Import our custom CSS
-import "../scss/main.scss"
+// Import Stylescape styles
+import "../scss/styles.scss";
 
-// Import only the Bootstrap components we need
-import { Popover } from "bootstrap";
-
-// Create an example popover
+// Import Stylescape JavaScript
+import "stylescape";

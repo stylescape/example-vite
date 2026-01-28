@@ -1,73 +1,190 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stylescape w/ Vite</title>
-    <link rel="stylesheet" href="scss/styles.scss">
-    <script type="module" src="./js/main.js"></script>
-  </head>
-  <body>
-    <div class="container py-4 px-3 mx-auto">
-      <header class="d-flex justify-content-between align-items-md-center pb-3 mb-5 border-bottom">
-        <h1 class="h4">
-          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bootstrap-fill d-inline-block me-2" viewBox="0 0 16 16">
-              <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"/>
-              <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z"/>
-            </svg>
-            <span>Vite</span>
-          </a>
-        </h1>
-        <a href="https://github.com/twbs/examples/tree/main/vite/" target="_blank" rel="noopener">View on GitHub</a>
-      </header>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Stylescape - Vite Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Stylescape example using Vite bundler" />
+        <link rel="stylesheet" href="scss/styles.scss" />
+        <script type="module" src="./js/main.js"></script>
+    </head>
 
-      <h1>Build Stylescape with Vite</h1>
-      <div class="col-lg-8 px-0">
-        <p class="fs-4">You've successfully loaded the Stylescape + Vite example! It's loaded up with <a href="https://getbootstrap.com/">Stylescape 5</a> and uses Vite to compile and bundle our Sass and JavaScript.</p>
-        <p>If this button appears blue and the link appears purple, you've done it!</p>
-      </div>
+    <body>
+        <div class="frame_main">
+            <!-- TOP RIBBON -->
+            <div class="frame_main__area--top">
+                <header class="ribbon--top" role="navigation">
+                    <div class="ribbon__slot--horizontal_left">
+                        <h1 class="ribbon__title" role="heading" aria-level="1">
+                            <div class="ribbon__title__text">
+                                <a href="/">STYLESCAPE VITE</a>
+                            </div>
+                        </h1>
+                    </div>
 
-      <button type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
-      <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover" title="Custom popover" data-bs-content="This is a Stylescape popover.">Example popover</a>
+                    <div class="ribbon__slot--horizontal_center">
+                        <button
+                            aria-label="Toggle navigation"
+                            aria-expanded="false"
+                            type="button"
+                            class="menu_button ribbon__nav_button"
+                        >
+                            ☰
+                        </button>
+                    </div>
 
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div class="ribbon__slot--horizontal_right">
+                        <menu class="ribbon__menu" role="menubar">
+                            <li class="ribbon__menu__item">
+                                <input type="checkbox" id="themeToggle" data-ss="theme-toggle" />
+                            </li>
+                        </menu>
+                    </div>
+                </header>
+            </div>
+
+            <!-- LEFT SIDEBAR -->
+            <div class="frame_main__area--middle_left">
+                <aside
+                    class="sidebar--left"
+                    id="sidebar_left"
+                    role="navigation"
+                    data-ss="aside"
+                    data-ss-aside-menu="sidebar_left_menu"
+                    data-ss-aside-switch="sidebar_left_switch"
+                >
+                    <nav class="ribbon--left ribbon--inverted" aria-label="Sidebar Left Navigation"></nav>
+
+                    <nav id="sidebar_left_menu" class="sidebar__menu" aria-label="Sidebar Left Content Navigation">
+                        <section class="sidebar__content rail" role="region">
+                            <h2>Navigation</h2>
+                            <ul>
+                                <li><a href="#intro">Introduction</a></li>
+                                <li><a href="#setup">Setup</a></li>
+                                <li><a href="#components">Components</a></li>
+                            </ul>
+                        </section>
+                    </nav>
+
+                    <div class="sidebar__control" role="group" aria-label="Sidebar Toggle">
+                        <button
+                            class="flipper--left"
+                            id="sidebar_left_switch"
+                            aria-pressed="false"
+                            aria-label="Toggle Left Sidebar"
+                        ></button>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- MAIN CONTENT -->
+            <div class="frame_main__area--middle_center">
+                <main class="main_content rail" role="main">
+                    <section id="intro">
+                        <h1>Stylescape with Vite</h1>
+                        <p>
+                            This example demonstrates using Stylescape with Vite for fast development
+                            and optimized production builds.
+                        </p>
+
+                        <h4>⚡ Why Vite?</h4>
+                        <ul>
+                            <li>Lightning fast HMR (Hot Module Replacement)</li>
+                            <li>Native ES modules support</li>
+                            <li>Optimized production builds</li>
+                            <li>Built-in Sass support</li>
+                        </ul>
+                    </section>
+
+                    <hr />
+
+                    <section id="setup">
+                        <h2>Setup</h2>
+
+                        <h3>1. Install dependencies</h3>
+                        <pre><code>npm install stylescape
+npm install -D vite sass</code></pre>
+
+                        <h3>2. Import in your Sass</h3>
+                        <pre><code>// src/scss/styles.scss
+@use "stylescape";</code></pre>
+
+                        <h3>3. Import in your JavaScript</h3>
+                        <pre><code>// src/js/main.js
+import "stylescape";</code></pre>
+
+                        <h3>4. Run development server</h3>
+                        <pre><code>npm run start</code></pre>
+                    </section>
+
+                    <hr />
+
+                    <section id="components">
+                        <h2>Components</h2>
+
+                        <h3>Accordion</h3>
+                        <div data-ss="accordion">
+                            <details>
+                                <summary>What is Vite?</summary>
+                                <p>Vite is a next-generation frontend build tool that offers a faster development experience.</p>
+                            </details>
+                            <details>
+                                <summary>Does it support Sass?</summary>
+                                <p>Yes! Just install sass as a dev dependency and Vite handles the rest.</p>
+                            </details>
+                            <details>
+                                <summary>How fast is HMR?</summary>
+                                <p>Vite's HMR is nearly instant, even in large projects, because it only updates what changed.</p>
+                            </details>
+                        </div>
+
+                        <h3>Buttons</h3>
+                        <div class="button_group">
+                            <button class="button">Default Button</button>
+                            <button class="button button--primary">Primary Button</button>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+            <!-- RIGHT SIDEBAR -->
+            <div class="frame_main__area--middle_right rail">
+                <aside
+                    class="sidebar--right"
+                    id="sidebar_right"
+                    role="navigation"
+                    data-ss="aside"
+                    data-ss-aside-menu="sidebar_right_menu"
+                    data-ss-aside-switch="sidebar_right_switch"
+                >
+                    <nav id="sidebar_right_menu" class="sidebar__menu" aria-label="Sidebar Right Content Navigation">
+                        <section class="sidebar__content rail" role="region">
+                            <h2>Resources</h2>
+                            <ul>
+                                <li><a href="https://github.com/stylescape/stylescape">GitHub</a></li>
+                                <li><a href="https://www.scape.style/">Documentation</a></li>
+                                <li><a href="https://vitejs.dev/">Vite Docs</a></li>
+                            </ul>
+                        </section>
+                    </nav>
+
+                    <div class="sidebar__control" role="group" aria-label="Sidebar Toggle">
+                        <button
+                            class="flipper--right"
+                            id="sidebar_right_switch"
+                            aria-pressed="false"
+                            aria-label="Toggle Right Sidebar"
+                        ></button>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="frame_main__area--bottom">
+                <footer class="ribbon--bottom">
+                    <p>Stylescape Vite Example | <a href="https://github.com/stylescape/example-vite">View on GitHub</a></p>
+                </footer>
+            </div>
         </div>
-        <div class="offcanvas-body">
-          <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-          </div>
-          <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <hr class="col-1 my-5 mx-0">
-
-      <h2>Guides</h2>
-      <p>Read more detailed instructions and documentation on using or contributing to Stylescape.</p>
-      <ul class="icon-list">
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Stylescape quick start guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/webpack/">Stylescape Webpack guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/parcel/">Stylescape Parcel guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/vite/">Stylescape Vite guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/contribute/">Contributing to Stylescape</a></li>
-      </ul>
-
-      <hr class="mt-5 mb-4">
-
-      <p class="text-muted">Created and open sourced by the Stylescape team. Licensed MIT.</p>
-    </div>
-  </body>
+    </body>
 </html>

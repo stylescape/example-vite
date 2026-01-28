@@ -1,43 +1,63 @@
-<div align="right">
+# Stylescape Vite Example
 
-[![GitHub License](https://img.shields.io/github/license/stylescape/example-vite?style=flat-square&logo=readthedocs&logoColor=FFFFFF&label=&labelColor=%23041B26&color=%23041B26&link=LICENSE)](https://github.com/stylescape/example-vite/blob/main/LICENSE)
-[![devContainer](https://img.shields.io/badge/devContainer-23041B26?style=flat-square&logo=Docker&logoColor=%23FFFFFF&labelColor=%23041B26&color=%23041B26)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/stylescape/example-vite)
-[![StackBlitz](https://img.shields.io/badge/StackBlitz-23041B26?style=flat-square&logo=StackBlitz&logoColor=%23FFFFFF&labelColor=%23041B26&color=%23041B26)](https://stackblitz.com/github/stylescape/example-vite/tree/main?file=src%2Findex.html)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/stylescape/example-vite)
 
-</div>
+This example demonstrates how to integrate [Stylescape](https://github.com/stylescape/stylescape) with [Vite](https://vitejs.dev/), a fast and modern frontend build tool.
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/stylescape/brand/master/src/logo/logo-transparant.png" width="20%" alt="Stylescape Logo">
-</p>
-<h1 align="center" style='border-bottom: none;'>Stylescape + Vite</h1>
-<h3 align="center">Example Project</h3>
+## About Stylescape
 
----
+Stylescape is a comprehensive design system and CSS framework that provides a complete toolkit for building modern, accessible, and responsive web interfaces. It includes layout systems, interactive components, and utility classes.
 
-Include [Stylescape](https://scape.style)'s source Sass and individual JavaScript plugins with [Vite](https://vitejs.dev/).
-
----
-
-## Quickstart
+## Installation
 
 ```sh
 git clone https://github.com/stylescape/example-vite.git
+cd example-vite
 npm install
+```
+
+## Usage
+
+### Development Server
+
+```sh
 npm start
 ```
 
----
+This starts the Vite development server with hot module replacement.
 
-## Colophon
+### Production Build
 
-Made with ❤️ by **[Scape Agency](https://www.scape.agency)**
+```sh
+npm run build
+```
 
-### Contributing
+Builds optimized assets for production.
 
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+## Project Structure
 
-### License
+```
+example-vite/
+├── src/
+│   ├── index.html      # Main HTML entry point
+│   ├── js/             # JavaScript source files
+│   └── scss/           # Sass stylesheets
+├── package.json        # Dependencies and scripts
+└── vite.config.js      # Vite configuration
+```
 
-This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for details.
+## Features Demonstrated
 
----
+- Importing Stylescape via npm
+- Compiling Sass source files
+- JavaScript component initialization
+- Hot module replacement during development
+
+## Learn More
+
+- [Stylescape Documentation](https://github.com/stylescape/stylescape)
+- [Vite Documentation](https://vitejs.dev/)
+
+## License
+
+MIT
