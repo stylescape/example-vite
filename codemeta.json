@@ -47,11 +47,15 @@
     "license": "https://spdx.org/licenses/MIT.html",
     "name": "Stylescape Example for Vite",
     "operatingSystem": "Any",
-    "programmingLanguage": ["JavaScript", "SCSS", "HTML"],
+    "programmingLanguage": [
+        "JavaScript",
+        "SCSS",
+        "HTML"
+    ],
     "relatedLink": [
         "https://github.com/stylescape/stylescape"
     ],
     "softwareRequirements": "Node.js >= 22.0.0",
     "url": "https://github.com/stylescape/example-vite",
-    "version": "0.0.1"
+    "version": "0.0.2"
 }

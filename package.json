@@ -1,7 +1,7 @@
 {
     "name": "stylescape-example-vite",
     "description": "Stylescape example using Vite bundler",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "private": true,
     "repository": "https://github.com/stylescape/example-vite",
     "license": "MIT",
@@ -27,7 +27,7 @@
         "prettier": "^3.8.1",
         "sass": "^1.97.3",
         "stylelint": "^16.18.0",
-        "stylelint-config-standard-scss": "^17.0.0",
+        "stylelint-config-standard-scss": "^15.0.1",
         "vite": "^7.3.1"
     }
 }
