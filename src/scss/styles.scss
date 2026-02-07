@@ -3,7 +3,7 @@
 // =============================================================================
 
 // Import all of Stylescape
-@use "stylescape";
+@use "stylescape/scss" as stylescape;
 
 // Custom styles
 @import "custom";
