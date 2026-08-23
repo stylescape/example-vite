@@ -21,7 +21,7 @@
         "format": "prettier --write \"src/**/*.{js,ts,jsx,tsx,css,scss,html,json}\""
     },
     "dependencies": {
-        "stylescape": "^0.4.0"
+        "stylescape": "^0.4.1"
     },
     "devDependencies": {
         "prettier": "^3.9.6",
